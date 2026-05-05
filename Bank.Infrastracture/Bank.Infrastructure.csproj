@@ -7,8 +7,8 @@
     <ProjectGuid>{93CAB1B7-8AA3-4AF1-8D69-D121A5AA5213}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DependencyInjection</RootNamespace>
-    <AssemblyName>DependencyInjection</AssemblyName>
+    <RootNamespace>Bank.Infrastructure</RootNamespace>
+    <AssemblyName>Bank.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
