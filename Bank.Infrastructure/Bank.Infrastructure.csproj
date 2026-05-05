@@ -66,6 +66,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bank.Controllers\Bank.Controllers.csproj">
+      <Project>{1957e2c0-7f0b-4135-bc6e-b22113e0312b}</Project>
+      <Name>Bank.Controllers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bank.Repos\Bank.Repos.csproj">
       <Project>{1276bde1-7409-4ed1-8916-d120f1fbcb15}</Project>
       <Name>Bank.Repos</Name>

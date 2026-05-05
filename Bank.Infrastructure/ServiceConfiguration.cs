@@ -2,6 +2,7 @@
 using System;
 using Bank.Services;
 using Bank.Repos;
+using Bank.Controllers;
 
 namespace Configuration
 {
@@ -15,8 +16,9 @@ namespace Configuration
 
                 services.AddTransient<IAccountService, AccountService>();
                 services.AddTransient<IAccountRepository, AccountRepository>();
+                services.AddTransient<AccountController>();
 
-                return services.BuildServiceProvider();
+            return services.BuildServiceProvider();
             }
 
         }

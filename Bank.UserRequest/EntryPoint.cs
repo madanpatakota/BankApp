@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using Bank.Controllers;
 using Bank.Services;
 using Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 
 
@@ -10,7 +11,7 @@ namespace EntryPoint
 
     class UserRequest
     {
-        public static void Main()
+        public static void Main1()
         {
 
             //Lets call to the method from controller
@@ -21,9 +22,28 @@ namespace EntryPoint
 
 
 
-
             Console.WriteLine("User having the Account number : HDFC1234");
             string balance =  service.GetBalance("HDFC1234"); // GEtBalanace
+            Console.WriteLine(balance);
+            Console.ReadLine();
+
+
+        }
+
+
+        public static void Main()
+        {
+
+            IServiceProvider provider = ServicesConfiguration.SetupServices();
+
+            // 👉 Get Controller instead of Service
+            AccountController controller = provider.GetService<AccountController>();
+
+            Console.WriteLine("User having the Account number : HDFC1234");
+
+            // 👉 Call Controller
+            string balance = controller.GetBalance("HDFC1234");
+
             Console.WriteLine(balance);
             Console.ReadLine();
 
