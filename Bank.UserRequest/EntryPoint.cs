@@ -14,29 +14,24 @@ namespace EntryPoint
         public static void Main()
         {
 
-            //Lets call to the method from controller
-
-
-
-
-            //IServiceProvider provider = ServicesConfiguration.SetupServices();
-            //IAccountService service = provider.GetService<IAccountService>();
-
-
-
-
-            //Console.WriteLine("User having the Account number : HDFC1234");
-            //string balance =  service.GetBalance("HDFC1234"); // GEtBalanace
-            //Console.WriteLine(balance);
-            //Console.ReadLine();
-
 
             string accountNum = "HDFC1234";
 
-            // DI manually
-            IAccountRepository repo = new AccountRepository();
-            IAccountService service = new AccountService(repo);
 
+            var services = new ServiceCollection();
+
+            services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<AccountController>();
+
+
+            IServiceProvider serviceProvider = services.BuildServiceProvider();
+            IAccountService service = serviceProvider.GetService<IAccountService>();
+
+
+            // DI manually
+            //IAccountRepository repo = new AccountRepository();
+            //IAccountService service = new AccountService(repo);
 
             AccountController controller = new AccountController(service);
             string result = controller.GetBalance(accountNum);
@@ -49,5 +44,5 @@ namespace EntryPoint
     }
 
     //User Request from Here.
-   
+
 }
