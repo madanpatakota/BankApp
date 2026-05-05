@@ -70,13 +70,13 @@
       <Project>{1957e2c0-7f0b-4135-bc6e-b22113e0312b}</Project>
       <Name>Bank.Controllers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Bank.Infrastructure\Bank.Infrastructure.csproj">
+      <Project>{6de29029-a8cb-4105-b1fd-c7b2e5e94906}</Project>
+      <Name>Bank.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bank.Services\Bank.Services.csproj">
       <Project>{82e0faf3-e26e-4e1c-877d-1ae36a76f044}</Project>
       <Name>Bank.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DependencyInjection\Bank.Infrastructure.csproj">
-      <Project>{93cab1b7-8aa3-4af1-8d69-d121a5aa5213}</Project>
-      <Name>Bank.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
