@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.App", "Bank.UserReques
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Controllers", "Bank.Controllers\Bank.Controllers.csproj", "{1957E2C0-7F0B-4135-BC6E-B22113E0312B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Infrastructure", "DependencyInjection\Bank.Infrastructure.csproj", "{93CAB1B7-8AA3-4AF1-8D69-D121A5AA5213}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Infrastructure", "Bank.Infrastructure\Bank.Infrastructure.csproj", "{93CAB1B7-8AA3-4AF1-8D69-D121A5AA5213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
