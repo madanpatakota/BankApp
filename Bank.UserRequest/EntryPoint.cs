@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using Bank.Services;
-using Configuration;
+using Bank.Repos;
+using Bank.Controllers;
 
 
 
@@ -28,6 +29,20 @@ namespace EntryPoint
             //string balance =  service.GetBalance("HDFC1234"); // GEtBalanace
             //Console.WriteLine(balance);
             //Console.ReadLine();
+
+
+            string accountNum = "HDFC1234";
+
+            // DI manually
+            IAccountRepository repo = new AccountRepository();
+            IAccountService service = new AccountService(repo);
+
+
+            AccountController controller = new AccountController(service);
+            string result = controller.GetBalance(accountNum);
+
+            Console.WriteLine(result);
+            Console.ReadLine();
 
 
         }
